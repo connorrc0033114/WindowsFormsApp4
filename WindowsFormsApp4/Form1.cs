@@ -27,7 +27,7 @@ namespace WindowsFormsApp4
 
             double Rt = R1 + R2 + R3 + R4 + R5;
 
-            LBLanswer.Text = "total R = " + Rt; 
+            LBLanswer.Text = "total R = " + Rt;
         }
     }
 }
