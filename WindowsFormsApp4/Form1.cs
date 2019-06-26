@@ -19,6 +19,7 @@ namespace WindowsFormsApp4
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //caluculate series resiatance
             double R1, R2, R3, R4, R5;
             try
             {
@@ -70,6 +71,62 @@ namespace WindowsFormsApp4
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //caluculate parallel resistance
+            double R1, R2, R3, R4, R5;
+            try
+            {
+                R1 = Convert.ToDouble(textBox5.Text);
+            }
+            catch
+            {
+                R1 = double.PositiveInfinity;
+            }
+            try
+            {
+                R2 = Convert.ToDouble(textBox4.Text);
+            }
+            catch
+            {
+                R2 = double.PositiveInfinity;
+            }
+            try
+            {
+                R3 = Convert.ToDouble(textBox6.Text);
+            }
+            catch
+            {
+                R3 = double.PositiveInfinity;
+            }
+            try
+            {
+                R4 = Convert.ToDouble(textBox2.Text);
+            }
+            catch
+            {
+                R4 = double.PositiveInfinity;
+            }
+            try
+            {
+                R5 = Convert.ToDouble(textBox1.Text);
+            }
+            catch
+            {
+                R5 = double.PositiveInfinity;
+            }
+
+
+            double Rt = 1/(1/R1+1/R2+1/R3+1/R4+1/R5);
+
+            label6.Text = "total R = " + Rt;
         }
     }
 }
